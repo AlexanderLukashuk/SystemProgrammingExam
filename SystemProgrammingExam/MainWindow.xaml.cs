@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 
 namespace SystemProgrammingExam
 {
@@ -23,6 +25,22 @@ namespace SystemProgrammingExam
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void SendSMS(object sender, RoutedEventArgs e)
+        {
+            string accountSid = Environment.GetEnvironmentVariable("AC6a3f8378d7611c91aeb27c4c1f0a144a");
+            string authToken = Environment.GetEnvironmentVariable("b17eb3fadab80eb203036f68b2b62859");
+
+            TwilioClient.Init(accountSid, authToken);
+
+            var message = MessageResource.Create(
+            body: "Hello",
+            from: new Twilio.Types.PhoneNumber("+12055767674"),
+            to: new Twilio.Types.PhoneNumber("+77754570190")
+        );
+
         }
     }
 }

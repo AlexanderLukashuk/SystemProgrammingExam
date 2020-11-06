@@ -11,7 +11,7 @@
         <TextBox x:Name="phoneTextBox" HorizontalAlignment="Left" Margin="10,42,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" FontSize="20" />
         <TextBlock HorizontalAlignment="Left" Margin="10,76,0,0" Text="Введите текст для отправки:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
         <TextBox x:Name="smsTextBox" HorizontalAlignment="Left" Margin="10,108,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" FontSize="20" Height="109" />
-        <Button Content="Отправить" Name="Send" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" FontSize="20" Height="45" Width="118"/>
+        <Button Content="Отправить" Click="SendSMS" Name="Send" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" FontSize="20" Height="45" Width="118"/>
 
 
     </Grid>

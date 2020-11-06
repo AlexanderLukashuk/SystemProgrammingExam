@@ -17,3 +17,10 @@ C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\obj\
 C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\obj\Debug\netcoreapp3.1\SystemProgrammingExam.dll
 C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\obj\Debug\netcoreapp3.1\SystemProgrammingExam.pdb
 C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\obj\Debug\netcoreapp3.1\SystemProgrammingExam.genruntimeconfig.cache
+C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\bin\Debug\netcoreapp3.1\Twilio.dll
+C:\Users\Luka_ry90\source\repos\SystemProgrammingExam\SystemProgrammingExam\obj\Debug\netcoreapp3.1\SystemProgrammingExam.csproj.CopyComplete

@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Twilio": {
+              "target": "Package",
+              "version": "[5.49.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
