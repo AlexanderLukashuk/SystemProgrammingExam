@@ -31,28 +31,33 @@ namespace SystemProgrammingExam
 
         }
 
-        private void SendSMS(object sender, RoutedEventArgs e)
+        private async void SendSMS(object sender, RoutedEventArgs e)
         {
             //ButtonPressDelay();
-            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(30) };
-            timer.Start();
+            //var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(30) };
+            //timer.Start();
             //bool result = Regex.Match(phoneTextBox.Text, @"\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})").Success;
             //MessageBox.Show(result.ToString());
             string phoneNumber = $"+7{phoneTextBox.Text}";
             if (Regex.Match(phoneTextBox.Text, @"\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})").Success)
             {
-                string accountSid = Environment.GetEnvironmentVariable("AC15a9364b89062d729d06c9977c0d1e6c");
-                string authToken = Environment.GetEnvironmentVariable("7d1c9721d9cc263875d3e00a70f70d8c");
+                await Task.Delay(3000);
+                //await Task.Run(() =>
+                //{
+                //    string accountSid = Environment.GetEnvironmentVariable("AC15a9364b89062d729d06c9977c0d1e6c");
+                //    string authToken = Environment.GetEnvironmentVariable("7d1c9721d9cc263875d3e00a70f70d8c");
 
-                TwilioClient.Init(accountSid, authToken);
+                //    TwilioClient.Init(accountSid, authToken);
 
-                var message = MessageResource.Create(
-                body: smsTextBox.Text,
-                from: new Twilio.Types.PhoneNumber("+12058947575"),
-                to: new Twilio.Types.PhoneNumber(phoneTextBox.Text)
-            );
-                MessageBox.Show("Text");
+                //    var message = MessageResource.Create(
+                //    body: smsTextBox.Text,
+                //    from: new Twilio.Types.PhoneNumber("+12058947575"),
+                //    to: new Twilio.Types.PhoneNumber(phoneTextBox.Text)
+                //);
 
+                //});
+                await Task.Delay(30000);
+                smsTextBox.Text += "t";
             }
             else
             {

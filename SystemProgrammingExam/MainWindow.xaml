@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SystemProgrammingExam"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="310" Width="300">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Введите номер телефона:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" />
-        <TextBox x:Name="phoneTextBox" HorizontalAlignment="Left" Margin="10,42,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" FontSize="20" />
+        <TextBox x:Name="phoneTextBox" HorizontalAlignment="Left" Margin="39,42,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" FontSize="20" />
         <TextBlock HorizontalAlignment="Left" Margin="10,76,0,0" Text="Введите текст для отправки:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
         <TextBox x:Name="smsTextBox" HorizontalAlignment="Left" Margin="10,108,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" FontSize="20" Height="109" />
         <Button Content="Отправить" Click="SendSMS" Name="send" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" FontSize="20" Height="45" Width="118"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,42,0,0" Text="+7" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
 
 
     </Grid>
