@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,8 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace SystemProgrammingExam
 {
@@ -30,17 +33,37 @@ namespace SystemProgrammingExam
 
         private void SendSMS(object sender, RoutedEventArgs e)
         {
-            string accountSid = Environment.GetEnvironmentVariable("AC6a3f8378d7611c91aeb27c4c1f0a144a");
-            string authToken = Environment.GetEnvironmentVariable("b17eb3fadab80eb203036f68b2b62859");
+            //ButtonPressDelay();
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(30) };
+            timer.Start();
+            //bool result = Regex.Match(phoneTextBox.Text, @"\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})").Success;
+            //MessageBox.Show(result.ToString());
+            string phoneNumber = $"+7{phoneTextBox.Text}";
+            if (Regex.Match(phoneTextBox.Text, @"\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})").Success)
+            {
+                string accountSid = Environment.GetEnvironmentVariable("AC15a9364b89062d729d06c9977c0d1e6c");
+                string authToken = Environment.GetEnvironmentVariable("7d1c9721d9cc263875d3e00a70f70d8c");
 
-            TwilioClient.Init(accountSid, authToken);
+                TwilioClient.Init(accountSid, authToken);
 
-            var message = MessageResource.Create(
-            body: "Hello",
-            from: new Twilio.Types.PhoneNumber("+12055767674"),
-            to: new Twilio.Types.PhoneNumber("+77754570190")
-        );
+                var message = MessageResource.Create(
+                body: smsTextBox.Text,
+                from: new Twilio.Types.PhoneNumber("+12058947575"),
+                to: new Twilio.Types.PhoneNumber(phoneTextBox.Text)
+            );
+                MessageBox.Show("Text");
 
+            }
+            else
+            {
+                MessageBox.Show("Неправильно введен номер телефона");
+            }
+
+        }
+
+        public async void ButtonPressDelay()
+        {
+            await Task.Delay(30000);
         }
     }
 }
